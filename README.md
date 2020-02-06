@@ -9,3 +9,5 @@ ChangeIP.cmd - set the variables to your fixed IP settings and this will toggle 
 DeviceBreakdown - unix script uses nmap to get a count of devices on the LAN based on MAC address
 
 DeviceCount.cmd - counts the number devices on a LAN using nmap
+
+get_lan_macs.sh - scans LAN using NMAP & appends count of devices by manfacturer to CSV file
