@@ -1,5 +1,9 @@
 #!/bin/bash
 #
+EXPF='/var/www/html/LANMACs.csv'
+if [ ! -f "$EXPF" ]; then
+	echo "Date,Time,Count,Apple,Cisco,Intel,netgear,Chongqing,Other" >> $EXPF
+fi
 SCAN=`ip route | grep -v default | awk '{print $1}'`
 EXPF='/var/www/html/LANMACs.csv'
 UNIQ=`date +"%Y%m%d%H%M"`
@@ -10,7 +14,7 @@ awk -F\( '/MAC/ {print $2}' $OUTF | awk -F\) '{print $1}' | sort > $MACF
 Dati=`date +"%d/%m/%Y,%H:%M"`
 Tcon=`awk -F\( '/done/ {print $2}' $OUTF | awk '{print $1}'`
 Coun=$((Tcon-1))
-Appl=`cat $MACF | grep Apple | wc -l` 
+Appl=`cat $MACF | grep Apple | wc -l`
 Cisc=`cat $MACF | grep Cisco | wc -l`
 Inte=`cat $MACF | grep Intel | wc -l`
 Netg=`cat $MACF | grep Netgear | wc -l`
