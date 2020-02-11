@@ -1,3 +1,5 @@
+#!/bin/bash
+#
 SCAN=`ip route | grep -v default | awk '{print $1}'`
 EXPF='/var/www/html/LANMACs.csv'
 UNIQ=`date +"%Y%m%d%H%M"`
@@ -16,3 +18,4 @@ Chon=`cat $MACF | grep Chongqing | wc -l`
 Unkn=$((Coun-Appl-Cisc-Inte-Netg-Chon))
 Comm=','
 echo $Dati$Comm$Coun$Comm$Appl$Comm$Cisc$Comm$Inte$Comm$Netg$Comm$Chon$Comm$Unkn >> $EXPF
+find /tmp -name "???file*" -type f -mtime +7 -exec rm {} \;
