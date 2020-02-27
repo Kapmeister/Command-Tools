@@ -11,3 +11,6 @@ DeviceBreakdown - unix script uses nmap to get a count of devices on the LAN bas
 DeviceCount.cmd - counts the number devices on a LAN using nmap
 
 get_lan_macs.sh - scans LAN using NMAP & appends count of devices by manfacturer to CSV file
+
+PingList.cmd/txt - Ping a list of devices & export average response to a CSV file. 
+
