@@ -48,6 +48,6 @@ Unkn=$((Coun-Appl-Cisc-Inte-Netg-Chon))
 Comm=','
 echo $Dati$Comm$Coun$Comm$Appl$Comm$Cisc$Comm$Inte$Comm$Netg$Comm$Chon$Comm$Unkn >> $EXPF
 #
-# keep our temp files for 7 days if any debugging or analysis is required after that delete. 
+# keep our temp files for 14 days if any debugging or analysis is required after that delete. 
 #
-find /tmp -name "???file*" -type f -mtime +7 -exec rm {} \;
+find /tmp -name "???file*" -type f -mtime +14 -exec rm {} \;

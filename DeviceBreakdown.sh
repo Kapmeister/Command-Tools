@@ -1,3 +1,4 @@
+#!/bin/bash
 nmap -sn 192.168.0.0/24 > /tmp/outfile
 awk -F\( '/MAC/ {print $2}' /tmp/outfile | awk -F\) '{print $1}' | sort > /tmp/macfile
 Dati=`date +"%d/%m/%Y,%H:%M"`

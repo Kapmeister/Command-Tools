@@ -1,5 +1,6 @@
 @setlocal enableextensions enabledelayedexpansion
 @echo off
+REM nmap needs to be installed & in the path. 
 set OFILE=DeviceCount.csv
 for /f "tokens=2,3,4 delims=^/ " %%d in ('date /t') do echo %%e/%%d/%%f>dd.txt
 for /F usebackq^ delims^=^ eol^= %%j in ("dd.txt") do (< nul set /P ="%%j" > dd.txt)
