@@ -4,7 +4,7 @@ REM Ideally this should be run with administrator rights.
 REM
 if .%TMP%. == .. goto NoTmp
 cd %TMP%
-attrib -r -a -s -h *.*
+attrib -r -a -s -h *.* /d /s
 echo Y | del *.*
 for /d %%x in (*.*) do rd /s /q "%%x"
 goto end
