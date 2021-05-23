@@ -15,3 +15,4 @@ get_lan_macs.sh - scans LAN using NMAP & appends count of devices by manfacturer
 
 PingList.cmd/txt - Ping a list of devices & export average response to a CSV file. 
 
+sha256.cmd - using certutil to generate sha256 encoding without needing to remember the parameters. 
